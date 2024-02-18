@@ -40,7 +40,7 @@ app.get("/movies/", async(request, response) => {
     movie;`;
         const moviesArray = await db.all(getAllMovieQuery);
         response.send(
-            moviesArray.map(moviename) => convertMovieNametoPascalCase(moviename))
+            moviesArray.map((moviename) => convertMovieNametoPascalCase(moviename))
         );
 });
 
